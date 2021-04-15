@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		.a{
+			width: 250px;
+			height: 280px;
+			margin: auto;
+			border: 2px solid black;
+
+		}
+		input{
+			width: 80px;
+			height: 40px;
+			background-color: green;
+			font-size: 30px;
+			color: white;
+			border-bottom: 1px solid black
+		}
+		#finalanswer{
+			width: 250px;
+			height: ;
+		}
+	</style>
+</head>
+<body>
+	<div class="a">
+		<form name="form">
+			<input type="text" name="answer" id="finalanswer"><br>
+
+			<input onclick="form.answer.value += '1'" type="button" value="1" name="">
+
+			<input onclick="form.answer.value += '2'" type="button" value="2" name="">
+
+			<input onclick="form.answer.value += '3'" type="button" value="3" name=""><br>
+
+			<input onclick="form.answer.value += '4'" type="button" value="4" name="">
+
+			<input onclick="form.answer.value += '5'" type="button" value="5" name="">
+
+			<input onclick="form.answer.value += '6'" type="button" value="6" name=""><br>
+
+			<input onclick="form.answer.value += '7'" type="button" value="7" name="">
+
+			<input onclick="form.answer.value += '8'" type="button" value="8" name="">
+
+			<input onclick="form.answer.value += '9'" type="button" value="9" name=""><br>
+
+			<input onclick="form.answer.value += '+'" type="button" value="+" name="">
+
+			<input onclick="form.answer.value += '-'" type="button" value="-" name="">
+
+			<input onclick="form.answer.value += '/'" type="button" value="/" name=""><br>
+
+			<input onclick="form.answer.value += '0" type="button" value="0" name="">
+
+			<input onclick="form.answer.value += '*" type="button" value="*" name="">
+
+			<input onclick="form.answer.value = eval(form.answer.value)" value="=" type="button"><br>
+
+			<input onclick="form.answer.value = ''" type="button" value="clean all" id="finalanswer" name="">
+		</form>
+	</div>
+
+</body>
+</html>
