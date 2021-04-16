@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+</head>
+<body>
+	<div class="container">
+		<div class="col-lg-6 m-auto ">
+			<form onsubmit="return validation()">
+
+				<div class="form-group">
+					<label>Username</label>
+					<input type="text" name="" class="form-control"
+					id="user"  >
+
+					<span id="username" class="text-danger"></span>
+				</div>
+				<div class="form-group">
+					<label>Password</label>
+					<input type="text" name="" class="form-control"
+					id="pass"  >
+
+					<span id="password" class="text-danger"></span>
+				</div>
+
+				<div class="form-group">
+					<label>Confirm Password</label>
+					<input type="text" name="" class="form-control"
+					id="cpass"  >
+
+					<span id="cpassword" class="text-danger"></span>
+				</div>
+				<div class="form-group">
+					<label>Phone Number</label>
+					<input type="text" name="" class="form-control"
+					id="num"  >
+
+					<span id="number" class="text-danger"></span>
+				</div>
+				<button class="btn btn-info">Submit</button>
+			</form>
+		</div>
+	</div>
+	<script>
+		function validation(){
+			var user = document.getElementById('user').value;
+			var pass = document.getElementById('pass').value;
+			var cpass = document.getElementById('cpass').value;
+			var num = document.getElementById('num').value;
+
+
+			if(user == ""){
+				document.getElementById('username').innerHTML =" ** Please fill the username field";
+				return false;
+			}
+			if((user.length <= 2) || (user.length > 20)) {
+				document.getElementById('username').innerHTML =" ** Username lenght must be between 2 and 20";
+				return false;	
+			}
+			if(!isNaN(user)){
+				document.getElementById('username').innerHTML =" ** only characters are allowed";
+				return false;
+			}
+			//password
+			if(pass == ""){
+				document.getElementById('password').innerHTML =" ** Please fill the password field";
+				return false;
+			}
+			if((pass.length <= 8) || (pass.length > 20)) {
+				document.getElementById('password').innerHTML =" ** Password lenght must be between  5 and 20";
+				return false;	
+			}
+			if(pass!=cpass){
+				document.getElementById('cpassword').innerHTML =" ** Password does not match the confirm password";
+				return false;
+			}
+			if(cpass == ""){
+				document.getElementById('cpassword').innerHTML =" ** Please fill the confirm password field";
+				return false;
+			}
+			//phone number
+			if(num == ""){
+				document.getElementById('number').innerHTML =" ** Please fill the phone number field";
+				return false;
+			}
+			if(num.length!=10) {
+				document.getElementById('number').innerHTML =" **mobile number must be 10 digit only";
+				return false;	
+			}
+			if(isNaN(num)){
+				document.getElementById('number').innerHTML =" ** only numbers are allowed";
+				return false;
+			}
+		}
+	</script>
+
+</body>
+</html>
